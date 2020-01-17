@@ -1,0 +1,15 @@
+Compression
+
+We use different compression techniques in order to reduce the size of the messages sent over the web. 
+An algorithm designed to compress a given string by describing the total number of consecutive occurrences of each character next to it. 
+For example conside the following string "alaasass", we can group the consecutive occurences of each character:
+
+* "a" occurs one time.
+* "l" occurs one time.
+* "a" occurs two times consecutively.
+* "s" occurs one time.
+* "a" occurs one time.
+* "s" occurs two times consecutively.
+
+If a character occurs only once, it is added to the compressed string. If it occurs consecutive times, the character is added to the string followed
+by an integer representing the number of consecutive occurrences .Thus the compressed form of the string is "ala2sas2".
