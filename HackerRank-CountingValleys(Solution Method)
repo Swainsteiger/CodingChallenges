@@ -1,0 +1,24 @@
+static int countingValleys(int n, String s) 
+    {
+        int level = 0;
+        int count = 0;
+        boolean flag = false;
+        s = s+""+"%";
+        char[] ch = new char[s.length()];
+        for (int i = 0; i < s.length(); i++)
+        {
+            ch[i] = s.charAt(i);
+        }
+        for (int i = 0; i < s.length()-1; i++)
+        {
+            if(ch[i]=='D')
+                level-=1;
+            if(ch[i]=='U')
+                level+=1;
+            if(level<=0 && ch[i]=='D')
+                flag=true;
+            if(flag==true && level==0 && ch[i]=='U') 
+                count++;
+        }
+        return count;
+    }
